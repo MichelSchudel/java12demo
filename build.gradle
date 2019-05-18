@@ -1,0 +1,21 @@
+plugins {
+    id 'application'
+}
+
+group 'nl.craftsmen'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.12
+targetCompatibility = 1.12
+
+repositories {
+    mavenCentral()
+}
+compileJava {
+    mainClassName = "nl.craftsmen.java12demo.SwitchDemo"
+    options.compilerArgs += ["--enable-preview", "-source" , "12"]
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
